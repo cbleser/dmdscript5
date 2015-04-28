@@ -1,0 +1,2 @@
+#!/bin/bash
+find test262/external/contributions/Google/sputniktests/tests/Conformance -name "$1.js" -exec cp {} . \;

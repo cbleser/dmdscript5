@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+first_loop: while(<>) {
+    print;
+    last first_loop;
+}
+start_loop: while(<>) {
+    if (m/^=== Summary ===/) {
+        print;
+        last start_loop;
+    }
+#    print "## $_";
+}
+
+end_loop: while(<>) {
+    if (m/^Expected to fail but passed/) {
+        last end_loop;
+    }
+    print;
+}
+

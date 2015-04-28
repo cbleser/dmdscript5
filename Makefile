@@ -211,10 +211,11 @@ ddd-ext: all
 SPUTNIK:=$(REPOROOT)/tools/sputnik.py
 
 ifdef EXTENDTEST
-TEST262_HARNESS_DIR:=$(REPOROOT)/test262/test/suite
-SUBTEST:=ch15/15.1/15.1.1
-SUBTEST:=ch11
-SUBTEST:=
+#TEST262_HARNESS_DIR:=$(REPOROOT)/test262/test/suite
+TEST262_HARNESS_DIR:=$(REPOROOT)/test262/
+#SUBTEST:=ch15/15.1/15.1.1
+#SUBTEST:=ch11
+SUBTEST?=test/built-ins
 
 TEST262LOG:=test262_extended.log
 else
