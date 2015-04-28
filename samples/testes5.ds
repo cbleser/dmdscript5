@@ -1,0 +1,161 @@
+print("Ecmascript 5 support\n");
+var testname;
+
+function test(flag) {
+  print(" : " + ((flag)?"yes":"no") + "\n");
+} 
+
+print("Object.create");
+test(typeof Object.create == 'function');
+
+print("Object.defineProperty");
+test(typeof Object.defineProperty == 'function');
+
+print("Object.defineProperties");
+test(typeof Object.defineProperties == 'function');
+
+print("Object.getPrototypeOf");
+test(typeof Object.getPrototypeOf == 'function');
+
+
+print("Object.keys");
+test(typeof Object.keys == 'function');
+
+print("Object.seal");
+test(typeof Object.seal == 'function');
+
+print("Object.freeze");
+test(typeof Object.freeze == 'function');
+
+print("Object.preventExtensions");
+test(typeof Object.preventExtensions == 'function');
+
+
+print("Object.isSealed");
+test(typeof Object.isSealed == 'function');
+
+
+print("Object.isExtensible");
+test(typeof Object.isExtensible == 'function');
+
+
+print("Object.getOwnPropertyDescriptor");
+test(typeof Object.getOwnPropertyDescriptor == 'function');
+
+
+print("Object.getOwnPropertyNames");
+test(typeof Object.getOwnPropertyNames == 'function');
+
+print("Date.prototype.toISOString");
+test(typeof Date.prototype.toISOString == 'function');
+
+print("Date.now");
+test(typeof Date.now == 'function');
+
+
+print("Array.isArray");
+test(typeof Array.isArray == 'function');
+
+
+print("JSON");
+test(typeof JSON == 'object');
+
+
+print("Function.prototype.bind");
+test(typeof Function.prototype.bind == 'function');
+
+print("String.prototype.trim");
+test(typeof String.prototype.trim == 'function');
+
+
+print("Array.prototype.indexOf");
+test(typeof Array.prototype.indexOf == 'function');
+
+print("Array.prototype.lastIndexOf");
+test(typeof Array.prototype.lastIndexOf == 'function');
+
+
+print("Array.prototype.every");
+test(typeof Array.prototype.every == 'function');
+
+
+print("Array.prototype.forEach");
+test(typeof Array.prototype.forEach == 'function');
+
+print("Array.prototype.map");
+test(typeof Array.prototype.map == 'function');
+
+
+print("Array.prototype.filter");
+test(typeof Array.prototype.filter == 'function');
+
+
+print("Array.prototype.reduce");
+test(typeof Array.prototype.reduce == 'function');
+
+print("Array.prototype.reduceRight");
+test(typeof Array.prototype.reduceRight == 'function');
+
+
+print("Getter in property initializer");
+test(function () {
+  try {
+    return eval('({ get x(){ return 1 } }).x === 1');
+  } catch (e) {
+    return false;
+  }
+}());
+
+print("Setter in property initializer");
+test(function () {
+  try {
+    var value;
+    eval('({ set x(v){ value = v; } }).x = 1');
+    return value === 1;
+  } catch (e) {
+    return false;
+  }
+}());
+
+
+print("Property acess on strings");
+test("foobar"[3] === "b");
+
+print("Reserved words as property names");
+test(function () {
+  try {
+    var obj = { };
+    eval('obj = ({ if: 1 })');
+    return obj['if'] === 1;
+  } catch (e) {
+    return false;
+  }
+}());
+
+
+print("Zero-width chars in identfiers");
+test(function () {
+  try {
+    return eval('_\u200c\u200d = true');
+  } catch (e) { }
+}());
+
+
+print("Immutable undefined");
+test(function () {
+  var result;
+  try {
+    undefined = 12345;
+    result = typeof undefined == 'undefined';
+    undefined = void 0;
+  } catch (e) { }
+
+  return result;
+}());
+
+
+print("Strict mode");
+test(function () {
+  "use strict";
+  return !this;
+}());
