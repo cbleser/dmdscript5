@@ -1,3 +1,8 @@
+/*
+*
+ * Upgrading to EcmaScript 5.1 Carsten Bleser Rasmussen
+ */
+
 module dmdscript.utf;
 /*
  * Excert from Phobos standart library for D2, this one uses immutable destanation string

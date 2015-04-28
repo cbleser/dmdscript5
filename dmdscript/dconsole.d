@@ -1,3 +1,9 @@
+/*
+ * Link console in node.js
+ * This is just an initial version
+ *
+ * Upgrading to EcmaScript 5.1 by Carsten Bleser Rasmussen
+ */
 module dmdscript.dconsole;
 
 import std.stdio;
@@ -134,6 +140,3 @@ Value* Dconsole_log(Dobject pthis, CallContext *cc, Dobject othis, Value* ret, V
     ret.putVundefined();
     return null;
 }
-
-
-

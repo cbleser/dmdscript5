@@ -5,6 +5,8 @@
  *
  * written by Dmitry Olshansky 2010
  *
+ * Upgrading to EcmaScript 5.1 by Carsten Bleser Rasmussen
+ *
  * DMDScript is implemented in the D Programming Language,
  * http://www.digitalmars.com/d/
  *

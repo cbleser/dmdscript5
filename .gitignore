@@ -1,0 +1,12 @@
+# Emacs backups
+*~
+.#*
+#*#
+# Object files
+*.o
+# Archive files
+*.a
+# Object directoty
+obj/*
+# Test script program
+ds

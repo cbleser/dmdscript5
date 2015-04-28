@@ -8,6 +8,8 @@
  *
  * D2 port by Dmitry Olshansky
  *
+ * Upgrading to EcmaScript 5.1 by Carsten Bleser Rasmussen
+ *
  * DMDScript is implemented in the D Programming Language,
  * http://www.digitalmars.com/d/
  *
@@ -137,5 +139,3 @@ enum IRcode :ubyte
     IRuse_trace
 //    IRMAX
 }
-
-

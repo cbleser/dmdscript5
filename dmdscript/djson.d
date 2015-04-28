@@ -1,3 +1,8 @@
+/*
+ *
+ * Upgrading to EcmaScript 5.1 by Carsten Bleser Rasmussen
+ */
+
 module dmdscript.djson;
 
 import std.stdio;

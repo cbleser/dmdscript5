@@ -5,6 +5,8 @@
  * (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
  * written by Walter Bright
  * http://www.digitalmars.com
+*
+ * Upgrading to EcmaScript 5.1 by Carsten Bleser Rasmussen
  *
  * DMDScript is implemented in the D Programming Language,
  * http://www.digitalmars.com/d/
